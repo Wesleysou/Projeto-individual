@@ -83,3 +83,58 @@ header{
     font-size: 22pt;
     margin-bottom: 40px;
 }
+
+/* Sobre */
+#sobre{
+    height: 520px;
+    background-color: #ccc;
+    
+}
+
+.titulo-sobre{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color: #000;
+}
+
+.conteudo-sobre{
+    height: 80%;
+    display: flex;
+}
+
+.img-sobre{
+    height: 360;
+}
+.img-sobre img{
+    height: 300px;
+    width: 250px;
+    margin-right: 50px;
+    margin-left: 30px;
+}
+
+.texto-sobre{
+    height: 360px;
+    margin-top: 80px;
+}
+
+/* CSS footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px 0px;
+}
+
+footer div{
+    margin-bottom: 25px;
+    font-size: 38pt;
+}
+
+footer a{
+    margin: 0px 10px;
+    color: red;
+}
