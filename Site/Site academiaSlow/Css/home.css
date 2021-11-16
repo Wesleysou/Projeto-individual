@@ -1,0 +1,289 @@
+*{
+    /* tira a margem de tudo */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;   
+}
+html, body{
+    height: 100%;
+    color: #555;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    width: 150px;
+    height: 2px;
+    background-color: #2196f3;
+    border: 0;
+    margin-bottom: 80px;
+}
+
+/* Edição do header */
+header{
+    width: 100%;
+    height: 110%;
+    display: flex;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75) url("/img/academia.jpg");/* edita a imagem de fundo */
+    background-blend-mode: darken;/* edita a coloração da imaegm */
+    background-attachment: fixed;    
+    background-size: cover;/* faz com que a imagem cubra todo o header */
+}
+
+#navegacao{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around; /*da um espaço entre as letras*/
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    position: fixed;  /* Deixa a tap fixada*/
+    top: 0px;
+}
+
+#navegacao h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navegacao nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navegacao nav a, #navegacao h2 a {
+    margin: 0px 15px;
+    color: #fff;
+}
+
+#inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+#inicio h1{
+    font-size: 58pt;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#inicio h3{
+    font-size: 22pt;
+    margin-bottom: 40px;
+}
+
+/* EDICA DO MAIN-------------------------------------- */
+main{
+    width: 100%;
+    height: 110%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#calculadora, #video, #dicascorpo, #grafico{
+    min-height: 100%;              
+    /* define o tamanho de cada div principal */
+}
+
+/* Edicao das calculadoras */
+
+#calculadora{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.imc, .agua{
+    width: 40%;
+    height: 500px;
+}
+
+.imc{
+    background: linear-gradient(#000, red);
+    margin-top: 70px;
+
+}
+
+.agua{
+    background: linear-gradient(red, #000);
+    margin-top: 70px;
+
+}
+
+.texto-agua, .texto-imc{
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 20pt;
+    color: #fff;
+    font-weight: 700;
+
+}
+
+.texto-agua, .texto-imc p{
+    margin-top: 20px;
+}
+
+.input-imc, .input-agua{
+    height: 40%;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+
+}
+
+
+.input-imc input{
+    width: 70%;
+    height: 15%;
+    background-color: #ccc;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.input-agua input{
+    width: 70%;
+    height: 15%;
+    background-color: #ccc;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.input-imc, .input-agua, input::placeholder{
+    color: #000000;
+
+}
+
+.input-imc, .input-agua, span{
+    font-size: 15pt;
+    color: #fff;
+    
+}
+
+.result-agua, .result-imc{
+    height: 30%;
+    width: 60%;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 15pt;
+}
+
+
+.imc button{
+    height: 10%;
+      width: 100%;
+      font-size: 15pt;
+      background-color: #ccc;
+      color: #000;
+      border: none;
+      transition: background 1s;
+}
+
+.agua button{
+    height: 10%;
+    width: 100%;
+    font-size: 15pt;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    transition: background 1s;
+    
+    
+}
+
+.imc,.agua, button:hover{
+    background-color: #000;
+    color: #ccc;
+}
+
+
+
+/* Edicao do video */
+#video, #grafico{
+    background-color: #ccc;
+}
+
+#video {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#video iframe{
+    margin-top: 90px;
+}
+
+/* Edicao dicas */
+
+.linha{
+    height: 330px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.linha div{
+    height: 250px; 
+    width: 250px;
+    background-color: rgb(176, 176, 255);
+    margin-top: 50px;
+}
+.linha{
+    height: 330px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.linha div{
+    height: 250px; 
+    width: 250px;
+    background-color: rgb(176, 176, 255);
+    margin-top: 50px;
+}
+
+
+
+/* CSS footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px 0px;
+}
+
+footer div{
+    margin-bottom: 25px;
+    font-size: 38pt;
+}
+
+footer a{
+    margin: 0px 10px;
+    color: red;
+}

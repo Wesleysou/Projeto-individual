@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/home.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+        <section id="navegacao">
+            <h2><a href="#">AcademiaSlow</a></h2>
+            <nav>
+                <a href="#calculadora">Calculadora</a>
+                <a href="#video">Video</a>
+                <a href="#dicascorpo">Dicas</a>
+                <a href="#grafico">Grafico</a>
+            </nav>
+
+        </section>
+
+        <section id="inicio">
+            <div>
+                <h1>AcademiaSlow</h1>
+                <h3>Foque na sua melhor versão</h3>
+            </div>
+        </section>
+    </header>
+
+
+    <div id="calculadora">
+
+        <div class="imc">
+            <div class="texto-imc">
+                <p>Calculo do IMC</p>
+            </div>
+
+            <div class="input-imc">
+                <span>Peso:</span>
+                <input id="ipt_peso_imc" type="text" placeholder="Digite aqui o seu peso">
+                <br><br><br><br><br>
+                <span>Altura:</span>
+                <input id="ipt_altura_imc" type="text" placeholder="Digite aqui sua altura">
+            </div>
+
+            <div id="resulimc" class="result-imc">
+
+            </div>
+
+            <button onclick="calcimc()">Calcular</button>
+        </div>
+
+
+
+        <div class="agua">
+            <div class="texto-agua">
+                <p>Calculo de Àgua</p>
+            </div>
+
+            <div class="input-agua">
+
+                <span>Peso:</span>
+                <input id="ipt_peso_agua" type="text" placeholder="Digite aqui seu peso">
+            </div>
+
+            <div id="resulagua" class="result-agua">
+
+            </div>
+
+            <button class="btn-agua" onclick="calcagua()">Calcular</button>
+        </div>
+
+    </div>
+
+    <div id="video">
+
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/UTHHEOqJIaU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    </div>
+
+    <div id="dicascorpo">
+
+        <select name="" id="selecorpo" onchange="funcselecorp()">
+            <option value=" ">---Selecione---</option>
+            <option value="ect">Ectomorfo</option>
+            <option value="meso">Mesomorfo</option>
+            <option value="endo">Endomorfo</option>
+        </select>
+
+        <div id="tipoum" class="linha" >
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+
+        <!-- .linhaone{
+            height: 330px;
+            width: 100%;
+            background-color: rgb(123, 248, 21);
+            display: flex;
+            justify-content: space-around;
+        
+        }
+        
+        .linhaone div{
+            height: 250px; 
+            width: 250px;
+            background-color: rgb(176, 176, 255);
+            margin-top: 50px;
+        }
+        
+        .linhatow{
+            height: 330px;
+            width: 100%;
+            background-color: rgb(255, 0, 0);
+            display: flex;
+            justify-content: space-around;
+        
+        }
+        
+        .linhatow div{
+            height: 250px; 
+            width: 250px;
+            background-color: rgb(176, 176, 255);
+            margin-top: 50px;
+        }
+         -->
+        
+
+        <div id="tipoum" class="linha" >
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+<!-- 
+        <div id="tipodois" class="linhaone" style="display: none;">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+
+        <div id="tipodois" class="linhaone" style="display: none;">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+        <div id="tipotres" class="linhatow" style="display: none;">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+
+        <div id="tipotres" class="linhatow" style="display: none;">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div> -->
+
+
+
+    </div>
+
+    <div id="grafico">
+
+    </div>
+
+    <footer>
+        <div>
+            <a href="#"><i class="fa fa-twitter-square"></i></a>
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+            <a href="#"><i class="fa fa-snapchat-square"></i></a>
+            <a href="#"><i class="fa fa-pinterest-square"></i></a>
+            <a href="#"><i class="fa fa-github-square"></i></a>
+        </div>
+        <p>AcademiSlow - Wesley Monteiro</p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function calcimc() {
+        var peso = Number(ipt_peso_imc.value);
+        var altura = Number(ipt_altura_imc.value);
+        var alturax2 = altura * 2;
+        var imc = (peso / alturax2).toFixed(1);
+
+        if (peso == " ") {
+            alert('Digite o peso')
+        }
+        if (altura == " ") {
+            alert('Digite a altura')
+        } else {
+
+            if (imc < 18, 5) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está Abaixo do peso`;
+            }
+            else if (imc >= 18, 5 && imc <= 24, 9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: green;">${imc}</span> tem peso normal`;
+            }
+            else if (imc >= 25 && imc <= 29, 9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está sobrepeso`;
+            }
+            else if (imc >= 30 && imc <= 34, 9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está obesidade grau 1`;
+            }
+            else if (imc >= 35 && imc <= 29, 9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está Obesidade grau 2`;
+            }
+            else if (imc > 40) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está Obesidade grau 3`;
+            }
+
+        }
+
+        ipt_peso_imc.value = " ";
+        ipt_altura_imc.value = " ";
+
+
+
+    }
+
+    function calcagua() {
+        var peso = Number(ipt_peso_agua.value);
+        var agua = (peso * 0.035).toFixed(1);
+
+        resulagua.innerHTML = `Você tem que beber <span style="color: green;">${agua}L</span> de água por dia`;
+
+        ipt_peso_agua.value = " ";
+    }
+
+    function funcselecorp(){
+        if (selecorpo.value == " ") {
+            alert('Selecione um tipo corporal')
+        }
+        else if (selecorpo.value == "ect") {
+            tipoum.style.display = "block"
+        }
+        else if (selecorpo.value == "meso") {
+            tipodois.style.display = "block"
+        }
+        else if(selecorpo.value == "endo") {
+            tipotres.style.display = "block"
+        }
+
+    }
+
+</script>
