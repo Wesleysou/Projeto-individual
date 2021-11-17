@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Css/home.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 
@@ -84,109 +86,434 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
 
+            <div><i id="pergunta" onclick="videopergunta()" class="fas fa-question-circle"></i> </div>
+
     </div>
 
     <div id="dicascorpo">
 
-        <select name="" id="selecorpo" onchange="funcselecorp()">
-            <option value=" ">---Selecione---</option>
-            <option value="ect">Ectomorfo</option>
-            <option value="meso">Mesomorfo</option>
-            <option value="endo">Endomorfo</option>
-        </select>
+        <div class="line-select">
+            <select name="" id="selecorpo" onchange="funcselecorp()">
+                <option selected disabled value=" ">---Selecione---</option>
+                <option value="ecto">Ectomorfo</option>
+                <option value="mesomor">Mesomorfo</option>
+                <option value="endo">Endomorfo</option>
+            </select>
 
-        <div id="tipoum" class="linha" >
-
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <h1>AcademiaSlow</h1>
 
         </div>
 
-        <!-- .linhaone{
-            height: 330px;
-            width: 100%;
-            background-color: rgb(123, 248, 21);
-            display: flex;
-            justify-content: space-around;
-        
-        }
-        
-        .linhaone div{
-            height: 250px; 
-            width: 250px;
-            background-color: rgb(176, 176, 255);
-            margin-top: 50px;
-        }
-        
-        .linhatow{
-            height: 330px;
-            width: 100%;
-            background-color: rgb(255, 0, 0);
-            display: flex;
-            justify-content: space-around;
-        
-        }
-        
-        .linhatow div{
-            height: 250px; 
-            width: 250px;
-            background-color: rgb(176, 176, 255);
-            margin-top: 50px;
-        }
-         -->
-        
+        <div id="tipoum" style="display:block">
 
-        <div id="tipoum" class="linha" >
+            <div class="linha">
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+                <!-- linha 01 -->
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="linha">
+                <!-- linha 02 -->
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-<!-- 
-        <div id="tipodois" class="linhaone" style="display: none;">
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div id="tipodois" style="display: none;">
+
+            <!-- MESOMRFO LINHA 01 -->
+
+            <div class="linhaone">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MESOMRFO LINHA 02 -->
+
+            <div class="linhaone">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+                
+            </div>
 
         </div>
 
-        <div id="tipodois" class="linhaone" style="display: none;">
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+        <div id="tipotres" style="display: none;">
+
+            <!-- ENDOMORFO LINHA 01 -->
+
+            <div class="linhatow">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ENDOMORF LINHA 02 -->
+
+            <div class="linhatow">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-        <div id="tipotres" class="linhatow" style="display: none;">
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-        </div>
-
-        <div id="tipotres" class="linhatow" style="display: none;">
-
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-        </div> -->
+    </div>
 
 
 
@@ -261,20 +588,28 @@
         ipt_peso_agua.value = " ";
     }
 
-    function funcselecorp(){
-        if (selecorpo.value == " ") {
-            alert('Selecione um tipo corporal')
-        }
-        else if (selecorpo.value == "ect") {
+    function funcselecorp() {
+        if (selecorpo.value == "ecto") {
             tipoum.style.display = "block"
+            tipotres.style.display = "none"
+            tipodois.style.display = "none"
         }
-        else if (selecorpo.value == "meso") {
+        if (selecorpo.value == "mesomor") {
             tipodois.style.display = "block"
+            tipotres.style.display = "none"
+            tipoum.style.display = "none"
         }
-        else if(selecorpo.value == "endo") {
+        if (selecorpo.value == "endo") {
             tipotres.style.display = "block"
+            tipoum.style.display = "none"
+            tipodois.style.display = "none"
         }
 
+    }
+
+    function videopergunta() {
+        alert("Renato Cariani- Fisio Culturista e BodyBuilder encina como descobrir seu tipo corporal")
+        
     }
 
 </script>
