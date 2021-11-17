@@ -32,7 +32,8 @@ header{
     height: 110%;
     display: flex;
     color: #fff;
-    background: rgba(0, 0, 0, 0.75) url("/img/academia.jpg");/* edita a imagem de fundo */
+    background: rgba(0, 0, 0, 0.75) url("/img/cadmia.jpg");/*edita a imagem de fundo*/
+    background-image: url("/img/cadmia.jpg");
     background-blend-mode: darken;/* edita a coloração da imaegm */
     background-attachment: fixed;    
     background-size: cover;/* faz com que a imagem cubra todo o header */
@@ -66,6 +67,27 @@ header{
     color: #fff;
 }
 
+#navegacao nav a{
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: crimson;
+    color: #1b1818;
+    border-radius: 10px;
+    font-size: 13pt;
+    font-weight: bolder;
+    transition: 0.5;
+
+
+}
+
+#navegacao nav a:hover{
+    font-weight: 18pt;
+    color: white;
+}
 
 #navegacao h2 a{
     color: crimson;
@@ -111,17 +133,20 @@ main{
 #calculadora{
     display: flex;
     justify-content: space-evenly;
+    background-color: #1b1818;
     
 }
 
 .imc, .agua{
     width: 40%;
     height: 500px;
+    border-radius: 10px;
 }
 
 .imc{
     background: linear-gradient(#000, crimson);
     margin-top: 70px;
+    
 
 }
 
@@ -187,8 +212,8 @@ main{
     
 }
 
-.result-agua, .result-imc{
-    height: 30%;
+.result-imc{
+    height: 20%;
     width: 60%;
     border-radius: 15px;
     margin: auto;
@@ -197,6 +222,16 @@ main{
     font-size: 15pt;
 }
 
+.result-agua{
+    height: 30%;
+    width: 60%;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 15pt;
+
+}
 
 .imc button{
     height: 10%;
@@ -206,6 +241,8 @@ main{
       color: #000;
       border: none;
       transition: background 1s;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
 }
 
 .agua button{
@@ -216,6 +253,8 @@ main{
     color: #000;
     border: none;
     transition: background 1s;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     
     
 }
@@ -225,6 +264,19 @@ main{
     color: #ccc;
 }
 
+#melhoras{
+    height: 10%;
+    font-size: 15pt;
+    transition: 1s;
+    margin-left: 20px;
+    color: #fff;
+}
+
+#melhoras:hover{
+    cursor: pointer;
+    font-size: 20pt;
+    color: #ccc;
+}
 
 
 /* Edicao do video */
@@ -255,6 +307,10 @@ main{
 
 /* Edicao dicas */
 
+#dicascorpo{
+    background-color: #1b1818;
+}
+
 .line-select{
     width: 100%;
     display: flex;
@@ -284,15 +340,11 @@ main{
     transition: 0.5s;
 }
 
-.box-dicas:hover{
-    height: 290px; 
-    width: 290px;
-}
+
 /* linhaone */
 .linhaone{
     height: 330px;
     width: 100%;
-    background-color: #00ce67;
     display: flex;
     justify-content: space-around;
 
@@ -304,13 +356,13 @@ main{
     background-color: #b0b0ff;
     margin-top: 50px;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 /* linhatow */
 .linhatow{
     height: 330px;
     width: 100%;
-    background-color: #ff08d6;
     display: flex;
     justify-content: space-around;
 
@@ -322,6 +374,12 @@ main{
     background-color: #b0b0ff;
     margin-top: 50px;
     border-radius: 10px;
+    transition: 0.5s;
+}
+
+.box-dicas:hover{
+    height: 290px; 
+    width: 290px;
 }
 
 /* Dicas */
@@ -361,9 +419,9 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: red;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 60px 0px;
+    color: crimson;
+    background-color:  #1b1818;
+    padding: 60px 0px; 
 }
 
 footer div{
@@ -373,5 +431,5 @@ footer div{
 
 footer a{
     margin: 0px 10px;
-    color: red;
+    color: crimson;
 }
