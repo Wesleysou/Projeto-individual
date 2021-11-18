@@ -44,16 +44,24 @@
 
             <div class="input-imc">
                 <span>Peso:</span>
-                <input id="ipt_peso_imc" type="text" placeholder="Digite aqui o seu peso">
+                <input id="ipt_peso_imc" type="text" placeholder=" Digite aqui o seu peso">
                 <br><br><br><br><br>
                 <span>Altura:</span>
-                <input id="ipt_altura_imc" type="text" placeholder="Digite aqui sua altura">
+                <input id="ipt_altura_imc" type="text" placeholder=" Digite aqui sua altura">
             </div>
 
             <div id="resulimc" class="result-imc">
                 
             </div>
+
+            <div class="incones_imc">
             <i onclick="funcmelhoras()" id="melhoras" class="fas fa-tasks"></i>
+
+            <i onclick="funchistorico()" id="melhoras" class="fas fa-book-open"></i>
+
+        </div>
+
+
 
             <button onclick="calcimc()">Calcular</button>
         </div>
@@ -68,7 +76,7 @@
             <div class="input-agua">
 
                 <span>Peso:</span>
-                <input id="ipt_peso_agua" type="text" placeholder="Digite aqui seu peso">
+                <input id="ipt_peso_agua" type="text" placeholder=" Digite aqui seu peso">
             </div>
 
             <div id="resulagua" class="result-agua">
@@ -88,13 +96,13 @@
             allowfullscreen></iframe>
 
             <div><i id="pergunta" onclick="videopergunta()" class="fas fa-question-circle"></i> </div>
-
+            
     </div>
 
     <div id="dicascorpo">
 
         <div class="line-select">
-            <select name="" id="selecorpo" onchange="funcselecorp()">
+            <select name="" class="selebiotipo" id="selecorpo" onchange="funcselecorp()">
                 <option selected disabled value=" ">---Selecione---</option>
                 <option value="ecto">Ectomorfo</option>
                 <option value="mesomor">Mesomorfo</option>
@@ -105,7 +113,7 @@
 
         </div>
 
-        <div id="tipoum" style="display:block">
+        <div id="tipoum" style="display:none">
 
             <div class="linha">
 
@@ -118,7 +126,7 @@
                     </div>
 
                     <div class="conteudodica">
-                        Não deixe de beber o quanto de água que seu corpo precisa
+                        O ectomorfo precisa comer bem se quiser ganhar massa muscular
                     </div>
 
                 </div>
@@ -130,7 +138,7 @@
                     </div>
 
                     <div class="conteudodica">
-                        Não deixe de beber o quanto de água que seu corpo precisa
+                        Um ectomorfo deve ir à academia de 3 a 4 vezes na semana e os treinos não devem ultrapassar 45 minutos.
                     </div>
 
                 </div>
@@ -142,7 +150,7 @@
                     </div>
 
                     <div class="conteudodica">
-                        Não deixe de beber o quanto de água que seu corpo precisa
+                        consumir em torno 1,6 g/Kg de proteínas por dia e adicionar entre 300 a 500 calorias a mais na alimentação diária para, assim, ganhar massa muscular.
                     </div>
 
                 </div>
@@ -154,7 +162,7 @@
                     </div>
 
                     <div class="conteudodica">
-                        Não deixe de beber o quanto de água que seu corpo precisa
+                        As fontes magras de proteína são as que realmente vão ajudar na construção muscular, isso porque possuem maior quantidade de proteína com menor quantidade de gorduras.
                     </div>
 
                 </div>
@@ -166,7 +174,7 @@
                     </div>
 
                     <div class="conteudodica">
-                        Não deixe de beber o quanto de água que seu corpo precisa
+                        o ectomorfo precisa de uma melhora em seu condicionamento aeróbico.
                     </div>
 
                 </div>
@@ -540,6 +548,7 @@
 
 <script>
        var vt_imc = [];
+
     function calcimc() {
         var peso = Number(ipt_peso_imc.value);
         var altura = Number(ipt_altura_imc.value);
@@ -615,9 +624,22 @@
     }
 
 
-    function funcmelhora() {
-        alert
+    function funcmelhoras() {
+        alert(`O seu Primeiro IMC foi ${vt_imc[0]} o seu ultimo foi ${vt_imc[vt_imc.length -1]}`)
+        if (vt_imc[0] >= vt_imc[vt_imc.length -1]) {
+            alert('Parabêns você teve uma melhora de ')
+        }else{
+            alert("Treine mais e siga as dicas do site")
+        }
     }
+
+    function funchistorico() {
+        for (var ax_cont = 0 ; ax_cont <= vt_imc.length -1 ; ax_cont++) {
+            alert(`${ax_cont + 1}° - registro: ${vt_imc[ax_cont]}`)
+            
+        }
+    }
+
 
 
 
