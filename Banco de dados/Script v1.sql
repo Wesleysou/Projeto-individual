@@ -1,25 +1,27 @@
-create database AcademiaSlow;
+create database if not exists AcademiaSlow;
 use AcademiaSlow;
 
-create table cadastro(
+create table usuario(
 IdCadastro int primary key auto_increment,
 NomeUser varchar(45) not null,
 EmailUser varchar(45) not null,
 SenhaUser varchar(45) not null
 );
 
-insert into cadastro values 
+select * from usuario;
+
+insert into usuario values 
 (null,'Wesley','wesley@gmail.com','1234');
 
 create table caracteristica(
 IdCarac int primary key auto_increment,
-AlturaUser decimal(2,2),
+AlturaUser decimal(4,2),
 IdadeUser int,
 CorUser varchar(45),
 GeneroUser varchar(45),
 DataNascUser date,
-fk_cadastro int,
-foreign key (fk_cadastro) references cadastro(IdCadastro)
+fk_usuario int,
+foreign key (fk_usuario) references usuario(IdCadastro)
 )auto_increment = 100;
 
 select * from caracteristica;
@@ -27,11 +29,16 @@ select * from caracteristica;
 insert into caracteristica values 
 (null,1.85,18,'Preto','Neutro',20200909,1);
 
-create table objetivo(
+select * from usuario us
+join caracteristica cara 
+on cara.fk_usuario = us.IdCadastro;
+
+
+/*create table objetivo(
 Idobjetivo int primary key auto_increment,
 fk_cadastroobjetivo int,
 fk_caracteristica int,
-foreign key (fk_cadastroobjetivo) references cadastro (IdCadastro), 
+foreign key (fk_cadastroobjetivo) references usuario (IdCadastro), 
 foreign key (fk_caracteristica) references caracteristica (Idcarac),
 objetivoUser varchar(60),
 dataobjetivo date
@@ -41,10 +48,10 @@ insert into objetivo values
 (null,1,100,"Ganhar massa",20200909);
 
 select * from objetivo;
-select * from cadastro;
+select * from usuario;
 select * from caracteristica;
 
 select NomeUser, AlturaUser, GeneroUser, objetivoUser
 from objetivo
 join caracteristica on Idcarac = fk_cadastro
-join cadastro on fk_cadastroobjetivo = Idcarac;
+join usuario on fk_cadastroobjetivo = Idcarac;*/

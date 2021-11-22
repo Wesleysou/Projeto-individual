@@ -225,4 +225,12 @@ footer div{
 footer a{
     margin: 0px 10px;
     color: crimson;
+    transition: 0.5s;
 }
+
+footer a:hover{
+    color: #ccc;
+    cursor: pointer;
+  
+  }
+  

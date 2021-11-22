@@ -118,7 +118,7 @@ header {
 /* EDICA DO MAIN-------------------------------------- */
 main {
   width: 100%;
-  height: 110%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -126,8 +126,8 @@ main {
 #calculadora,
 #video,
 #dicascorpo,
-#grafico {
-  min-height: 110%;
+#boxrecomendacao {
+  min-height: 100%;
   /* define o tamanho de cada div principal */
 }
 
@@ -337,6 +337,11 @@ button:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: 20%;
+}
+
+#tipoum{
+  height: 80%;
 }
 
 .line-select h1 {
@@ -345,7 +350,7 @@ button:hover {
 }
 
 .linha {
-  height: 330px;
+  height: 50%;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -362,7 +367,7 @@ button:hover {
 
 /* linhaone */
 .linhaone {
-  height: 330px;
+  height: 40%;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -375,6 +380,7 @@ button:hover {
   margin-top: 50px;
   border-radius: 10px;
   transition: 0.5s;
+  
 }
 
 /* linhatow */
@@ -424,11 +430,61 @@ button:hover {
 .conteudodica {
   width: 100%;
   height: 80%;
-  color: black;
+  color: #1b1818;
   font-size: 13pt;
   padding: 10px;
   font-weight: bolder;
 }
+ 
+/* CSS DIV RECMENDAÇÕeS */
+
+#boxrecomendacao{
+  background-color: #1b1818;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recomendacao{
+  min-height: 100%;
+  width: 33%;
+  background-color: #ccc;
+  color: #1b1818;
+}
+
+.divicone{
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.divicone i{
+  font-size: 200px;
+  margin-top: 30px;
+}
+
+.textoacademia, .textodieta, .textcardio{
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.textoacademia h1, .textodieta h1, .textcardio h1{
+  color: crimson;
+  font-size: 18pt;
+}
+
+.textoacademia p, .textodieta p, .textcardio p{
+  font-size: 15pt;
+  color: #1b1818;
+  
+
+}
+
 
 /* CSS footer */
 footer {
