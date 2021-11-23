@@ -207,6 +207,34 @@ header{
     margin-bottom: 30px;
 }
 
+#video{
+  background-color: #1b1818;
+  min-height: 100%;
+  color: crimson;
+}
+
+#video {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#video iframe {
+  margin-top: 60px;
+}
+
+#pergunta {
+  cursor: pointer;
+  font-size: 15pt;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+#pergunta:hover {
+  font-size: 20pt;
+}
+
+
 /* CSS footer */
 footer{
     display: flex;
