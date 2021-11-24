@@ -126,7 +126,8 @@ main {
 #calculadora,
 #video,
 #dicascorpo,
-#boxrecomendacao {
+#boxrecomendacao,
+#grafico {
   min-height: 100%;
   /* define o tamanho de cada div principal */
 }
@@ -289,8 +290,7 @@ button:hover {
 }
 
 /* Edicao do video */
-#video,
-#grafico {
+#video{
   background-color: #ccc;
 }
 
@@ -485,6 +485,24 @@ button:hover {
 
 }
 
+#grafico{
+  min-height: 100%;
+    background-color: #1b1818; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.columnchart_material{
+height: 450px;
+        width: 70%; 
+        background-color: #ccc}
+
+#graficopage{
+  background-color: #1b1818;
+}
+
 
 /* CSS footer */
 footer {
@@ -492,7 +510,7 @@ footer {
   flex-direction: column;
   align-items: center;
   color: crimson;
-  background-color: #1b1818;
+  background-color: #ccc;
   padding: 60px 0px;
 }
 

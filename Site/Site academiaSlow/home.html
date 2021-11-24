@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="Css/home.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
 
     <title>Document</title>
@@ -22,6 +23,8 @@
                 <a href="#video">Video</a>
                 <a href="#dicascorpo">Biotipo</a>
                 <a href="#boxrecomendacao">Dicas</a>
+                <a href="#grafico">Gráfico
+                </a>
             </nav>
 
         </section>
@@ -83,7 +86,7 @@
 
             </div>
 
-            <button class="btn-agua" onclick="calcagua()">Calcular</button>
+            <button class="btn-agua" onclick="CalculoAgua()">Calcular</button>
         </div>
 
     </div>
@@ -622,6 +625,15 @@
 
     </div>
 
+    <div id="grafico">
+
+        <div class="columnchart_material">
+        <canvas id="chartBar" style="width: 100%; height: 100%;"></canvas>
+
+        </div>
+
+    </div>
+
 
 
 
@@ -633,7 +645,7 @@
             <a href="#"><i class="fa fa-pinterest-square"></i></a>
             <a href="#"><i class="fa fa-github-square"></i></a>
         </div>
-        <p>AcademiSlow - Wesley Monteiro</p>
+        <p>AcademiaSlow - Wesley Monteiro</p>
     </footer>
 </body>
 
@@ -683,7 +695,7 @@
 
     }
 
-    function calcagua() {
+    function CalculoAgua() {
         var peso = Number(ipt_peso_agua.value);
         var agua = (peso * 0.035).toFixed(1);
 
@@ -733,6 +745,47 @@
         }
     }
 
+
+    // JS
+
+// gráfico de Barras
+var ctxBar = document.getElementById("chartBar").getContext("2d");
+  var rotulosBar = ["Ectomorfo", "Mesomorfo", "Endomorfo"];
+  var dataBar = [4, 10, 8];
+  var configBar = {
+    type: 'bar',
+    data: {
+      labels: rotulosBar, // referenciando a variável de rótulos (labels) para o gráfico de barras
+      datasets: [
+        {
+          label: 'Quantidade de Biotipo',
+          data: dataBar, // referenciando a variável de dados para o gráfico de barras
+          backgroundColor: [
+            'crimson',
+            '#696969',
+            '#1b1818',
+
+          ],
+          borderColor: [
+            '#FFF',
+            '#FFF',
+            '#FFF',
+          ],
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      // por padrão, vem como 'true', e faz com que o gráfico se 'mantenha com o mesmo aspecto de proporção', não ficando responsivo
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+        }
+      }
+    }
+  }
+  var ax_chartBar = new Chart(ctxBar, configBar); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
 
 
 
