@@ -8,6 +8,8 @@ EmailUser varchar(45) not null,
 SenhaUser varchar(45) not null
 );
 
+
+
 select * from usuario;
 
 insert into usuario values 
