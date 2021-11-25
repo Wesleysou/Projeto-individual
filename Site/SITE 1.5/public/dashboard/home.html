@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
+
+    <title>AcademiaSlow | </title>
+</head>
+
+<body onload="validarSessao(), atualizacaoPeriodica()">
+    <header>
+
+        <section id="navegacao">
+            <h2><a href="/api-site/public/Indexslow.html">AcademiaSlow</a></h2>
+            <nav>
+                <a href="#calculadora">Calculadora</a>
+                <a href="#video">Video</a>
+                <a href="#dicascorpo">Biotipo</a>
+                <a href="#boxrecomendacao">Dicas</a>
+                <a href="#grafico">Gráfico
+                </a>
+            </nav>
+
+        </section>
+
+        <section id="inicio">
+            <div>
+                <h1>AcademiaSlow</h1>
+                <h3>Foque na sua melhor versão</h3>
+            </div>
+        </section>
+
+
+    </header>
+
+    <section id="area-usuario">
+
+        <div class="box-user">
+            <div>
+                <i class="far fa-user"></i>
+            </div>
+
+            <h1>Olá,<span id="b_usuario" style="color: #ccc; font-size: 20pt;">User</span> </h1>
+
+        </div>
+
+        <div class="box-user">
+            <div>
+
+                <h1>Biotipo</h1>
+
+            </div>
+
+            <span id="biotipo_user" style="color: #ccc; font-size: 20pt; font-weight: bolder; margin-top: 20px
+            ;">Biotipo</span>
+
+        </div>
+
+        <div class="box-user-caracteristica">
+            <div>
+
+                <h2>Altura:</h2> <span id="b_altura"></span>
+
+            </div>
+
+            <div>
+
+                <h2>Idade:</h2> <span id="b_idade"></span>
+
+            </div>
+
+            <div>
+
+                <h2>Cor:</h2> <span id="b_cor"></span>
+
+            </div>
+
+            <div>
+
+                <h2>Genero:</h2> <span id="b_genero"></span>
+
+            </div>
+
+            <div>
+
+                <h2>Data de nascimento:</h2> <span id="b_data"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="calculadora">
+
+        <div class="imc">
+            <div class="texto-imc">
+                <p>Calculo do IMC</p>
+            </div>
+
+            <div class="input-imc">
+                <span>Peso:</span>
+                <input id="ipt_peso_imc" type="text" placeholder=" Digite aqui o seu peso">
+                <br><br><br><br><br>
+                <span>Altura:</span>
+                <input id="ipt_altura_imc" type="text" placeholder=" Digite aqui sua altura">
+            </div>
+
+            <div id="resulimc" class="result-imc">
+
+            </div>
+
+            <div class="incones_imc">
+                <i onclick="funcmelhoras()" id="melhoras" class="fas fa-tasks"></i>
+
+                <i onclick="funchistorico()" id="melhoras" class="fas fa-book-open"></i>
+
+            </div>
+
+
+
+            <button onclick="calcimc()">Calcular</button>
+        </div>
+
+
+
+        <div class="agua">
+            <div class="texto-agua">
+                <p>Calculo de Àgua</p>
+            </div>
+
+            <div class="input-agua">
+
+                <span>Peso:</span>
+                <input id="ipt_peso_agua" type="text" placeholder=" Digite aqui seu peso">
+            </div>
+
+            <div id="resulagua" class="result-agua">
+
+            </div>
+
+            <button class="btn-agua" onclick="CalculoAgua()">Calcular</button>
+        </div>
+
+    </div>
+
+    <div id="video">
+
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/UTHHEOqJIaU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <div><i id="pergunta" onclick="videopergunta()" class="fas fa-question-circle"></i> </div>
+
+    </div>
+
+    <div id="dicascorpo">
+
+        <div class="line-select">
+            <select name="" class="selebiotipo" id="selecorpo" onchange="funcselecorp()">
+                <option selected disabled value=" ">---Selecione---</option>
+                <option value="ecto">Ectomorfo</option>
+                <option value="mesomor">Mesomorfo</option>
+                <option value="endo">Endomorfo</option>
+            </select>
+
+            <h1>AcademiaSlow</h1>
+
+        </div>
+
+        <div id="tipoum" style="display:none">
+
+            <div class="linha">
+
+                <!-- linha 01 -->
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        O ectomorfo precisa comer bem se quiser ganhar massa muscular
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Um ectomorfo deve ir à academia de 3 a 4 vezes na semana e os treinos não devem ultrapassar 45
+                        minutos.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Consumir em torno 1,6 g/Kg de proteínas por dia e adicionar entre 300 a 500 calorias a mais na
+                        alimentação diária para, assim, ganhar massa muscular.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        As fontes magras de proteína são as que realmente vão ajudar na construção muscular, isso porque
+                        possuem maior quantidade de proteína com menor quantidade de gorduras.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        O ectomorfo precisa de uma melhora em seu condicionamento aeróbico.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="linha">
+                <!-- linha 02 -->
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Use o principio do menos é mais, procure treinar com mais qualidade ou seja, mais intensidade e
+                        menor volume, ou duração de cada sessão.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não tenha pressa na hora do treino, realizar exercícios com velocidade lenta é uma excelente
+                        maneira de romper mais fibras nos treinos tensionais
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Promover intervalos mais longos (entre 60 e 90 seg) são interessantes para deixar o programas
+                        com características mais hipertróficas
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        O Descanso entre as sessões de treinamento e uma divisão de grupos musculares ao longo da
+                        semana, são fatores fundamentais para qualquer programa de musculação
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="tipodois" style="display: none;">
+
+            <!-- MESOMRFO LINHA 01 -->
+
+            <div class="linhaone">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Quando fazem treino com pesos, os mesomorfos devem usar pesos moderados a altos, uma vez que
+                        tendem à partida a ser musculados.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Dada a facilidade do ganho de massa muscular que os mesomorfos possuem, a dieta deve ser rica em
+                        proteínas, mas também em carboidratos e boas gorduras.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Combinar força com a capacidade e potência física, mesclando atividades para ganho muscular com
+                        aeróbicas, para melhorar o condicionamento cardiorrespiratório.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Um mesomorfo pode determinar quanta calorias precisa comer por dia para manter seu peso atual
+                        multiplicando seu peso atual por 33.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Entre os suplementos ideais para esses atletas, o Whey Protein é um dos destaques. Eles podem
+                        incluir tanto o Whey Protein Isolado quanto o Whey Protein Concentrado.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MESOMRFO LINHA 02 -->
+
+            <div class="linhaone">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Os exercícios aeróbicos além de auxiliar na melhoria da saúde cardiovascular, também auxiliam a
+                        evitar acúmulo de gordura.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Os mesomorfos suportam um volume maior de treinamento que os ectomorfos, porém não exagere e não
+                        queira passar horas dentro da academia. Cuidado com o overtraining!
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        pesar do biótipo mesomorfo ter maior facilidade no ganho de massa muscular, também podem chegar
+                        a um platô e estagnar nos resultados.
+
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Drop-sets, bisets, rest-pause são exemplos de métodos que podem ajudar a dar um choque nos
+                        músculos e ajudar no processo hipertrófico.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="tipotres" style="display: none;">
+
+            <!-- ENDOMORFO LINHA 01 -->
+
+            <div class="linhatow">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Aeróbicos, como corrida, caminhada, dança, Hampy, jump, natação. Mesclados com exercícios de
+                        força para a definição muscular.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        A dieta para emagrecimento das pessoas com o biotipo endomorfo deve ter menos calorias e a dieta
+                        low carb pode ser uma boa opção
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Permita que as proteínas façam parte de 50% de sua dieta. Escolha alimentos como peito de frango
+                        sem pele, carne vermelha magra, atum enlatado etc.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Tente fazer 8-12 repetições dos exercícios e 3-5 séries para a parte superior do corpo, e 12-20
+                        repetições para membros inferiores
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Após o treino é recomendado que você consuma carnes, ovos, leite, soja e seus derivados
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ENDOMORF LINHA 02 -->
+
+            <div class="linhatow">
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Complementar o seu gasto calórico, combine o treinamento resistido junto com as atividades
+                        cardiovasculares.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Alimentos ricos em fibra ajudam a manter a saciedade por mais tempo, evitando assim o risco de
+                        comer demasiadamente e ingerindo uma quantidade de calorias alta demais.
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+                <div class="box-dicas">
+                    <div class="titulodica">
+                        <i class="far fa-check-circle"></i>
+                        <h6>Dicas</h6>
+                    </div>
+
+                    <div class="conteudodica">
+                        Não deixe de beber o quanto de água que seu corpo precisa
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+    <div id="boxrecomendacao">
+
+        <div class="recomendacao">
+
+            <div class="divicone">
+                <i class="fas fa-dumbbell"></i>
+            </div>
+
+            <div class="textoacademia">
+
+                <h1>Recomendação número 1</h1>
+                <p>Treine no minimo 3x por semana</p>
+
+                <h1>Recomendação número 2</h1>
+                <p>Faça as repetições com calma</p>
+
+                <h1>Recomendação número 3</h1>
+                <p>Treine o corpo todo durante a semana</p>
+
+            </div>
+
+        </div>
+        <div class="recomendacao">
+
+            <div class="divicone">
+                <i class="fas fa-carrot"></i>
+            </div>
+
+            <div class="textodieta">
+
+                <h1>Recomendação número 1</h1>
+                <p>Treine no minimo 3x por semana</p>
+
+                <h1>Recomendação número 2</h1>
+                <p>Treine no minimo 3x por semana</p>
+
+                <h1>Recomendação número 3</h1>
+                <p>Treine no minimo 3x por semana</p>
+
+
+            </div>
+
+        </div>
+
+        <div class="recomendacao">
+
+            <div class="divicone">
+                <i class="fas fa-running"></i>
+
+
+            </div>
+
+            <div class="textcardio">
+
+
+                <h1>Recomendação número 1</h1>
+                <p>Faça cardio antes de tomar café da manha</p>
+
+                <h1>Recomendação número 2</h1>
+                <p>De no minimo 10.000 passos por dia</p>
+
+                <h1>Recomendação número 3</h1>
+                <p>Faça cardio apos o treino</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="grafico">
+
+        <div class="columnchart_material">
+            <canvas id="chartBar" style="width: 100%; height: 100%;"></canvas>
+
+        </div>
+
+    </div>
+
+
+
+
+    <footer>
+        <div>
+            <a href="#"><i class="fa fa-twitter-square"></i></a>
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+            <a href="#"><i class="fa fa-snapchat-square"></i></a>
+            <a href="#"><i class="fa fa-pinterest-square"></i></a>
+            <a href="#"><i class="fa fa-github-square"></i></a>
+        </div>
+        <p>AcademiaSlow - Wesley Monteiro</p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    biotipo_user.innerHTML = sessionStorage.BIOTIPO_USUARIO;
+    b_altura.innerHTML = sessionStorage.ALTURA_USUARIO;
+    b_idade.innerHTML = sessionStorage.IDADE_USUARIO;
+    b_cor.innerHTML = sessionStorage.COR_USUARIO;
+    b_genero.innerHTML = sessionStorage.GENERO_USUARIO;
+    b_data.innerHTML = sessionStorage.DATA_USUARIO;
+
+    var vt_imc = [];
+
+    function calcimc() {
+        var peso = Number(ipt_peso_imc.value);
+        var alturax = Number(ipt_altura_imc.value);
+        var alturax2 = alturax * 2;
+        var imc = (peso / alturax2).toFixed(1);
+
+        if (peso == " ") {
+            alert('Digite o peso')
+        }
+        if (alturax == " ") {
+            alert('Digite a altura')
+        } else {
+            vt_imc.push(`${imc}`);
+            if (imc < 18.5) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: yellow;">${imc}</span> você está Abaixo do peso`;
+            }
+            else if (imc >= 18.5 && imc <= 24.9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: green;">${imc}</span> tem peso normal`;
+            }
+            else if (imc >= 25 && imc <= 29.9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está sobrepeso`;
+            }
+            else if (imc >= 30 && imc <= 34.9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: light-yellow;">${imc}</span> você está obesidade grau 1`;
+            }
+            else if (imc >= 35 && imc <= 29.9) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está Obesidade grau 2`;
+            }
+            else if (imc > 40) {
+                resulimc.innerHTML = `O seu IMC é de <span style="color: red;">${imc}</span> você está Obesidade grau 3`;
+            }
+
+        }
+
+        ipt_peso_imc.value = " ";
+        ipt_altura_imc.value = " ";
+
+
+
+    }
+
+    function CalculoAgua() {
+        var peso = Number(ipt_peso_agua.value);
+        var agua = (peso * 0.035).toFixed(1);
+
+        resulagua.innerHTML = `Você tem que beber <span style="color: green;">${agua}L</span> de água por dia`;
+
+        ipt_peso_agua.value = " ";
+    }
+
+    function funcselecorp() {
+        if (selecorpo.value == "ecto") {
+            tipoum.style.display = "block"
+            tipotres.style.display = "none"
+            tipodois.style.display = "none"
+        }
+        if (selecorpo.value == "mesomor") {
+            tipodois.style.display = "block"
+            tipotres.style.display = "none"
+            tipoum.style.display = "none"
+        }
+        if (selecorpo.value == "endo") {
+            tipotres.style.display = "block"
+            tipoum.style.display = "none"
+            tipodois.style.display = "none"
+        }
+
+    }
+
+    function videopergunta() {
+        alert("Renato Cariani - (Fisio Culturista, BodyBuilder e Personal treiner) mostra como descobrir o seu biotipo")
+
+    }
+
+
+    function funcmelhoras() {
+        alert(`O seu Primeiro IMC foi ${vt_imc[0]} o seu ultimo foi ${vt_imc[vt_imc.length - 1]}`)
+        if (vt_imc[0] >= vt_imc[vt_imc.length - 1]) {
+            alert('Parabêns você teve uma melhora de ')
+        } else {
+            alert("Treine mais e siga as dicas do site")
+        }
+    }
+
+    function funchistorico() {
+        for (var ax_cont = 0; ax_cont <= vt_imc.length - 1; ax_cont++) {
+            alert(`${ax_cont + 1}° - registro: ${vt_imc[ax_cont]}`)
+
+        }
+    }
+
+
+    // JS
+
+    // gráfico de Barras
+    var ctxBar = document.getElementById("chartBar").getContext("2d");
+    var rotulosBar = ["Ectomorfo", "Mesomorfo", "Endomorfo"];
+    var dataBar = [4, 10, 8];
+    var configBar = {
+        type: 'bar',
+        data: {
+            labels: rotulosBar, // referenciando a variável de rótulos (labels) para o gráfico de barras
+            datasets: [
+                {
+                    label: 'Quantidade de Biotipo',
+                    data: dataBar, // referenciando a variável de dados para o gráfico de barras
+                    backgroundColor: [
+                        'crimson',
+                        '#696969',
+                        '#1b1818',
+
+                    ],
+                    borderColor: [
+                        '#FFF',
+                        '#FFF',
+                        '#FFF',
+                    ],
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            // por padrão, vem como 'true', e faz com que o gráfico se 'mantenha com o mesmo aspecto de proporção', não ficando responsivo
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                }
+            }
+        }
+    }
+    var ax_chartBar = new Chart(ctxBar, configBar); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
+
+
+
+</script>
