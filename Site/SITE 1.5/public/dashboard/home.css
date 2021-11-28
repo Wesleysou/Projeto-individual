@@ -21,7 +21,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: crimson;  
+  background-color: #e7e41b;  
   border-radius: 20px;       
 }
 
@@ -90,7 +90,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: crimson;
+  background-color: #e7e41b;
   color: #1b1818;
   border-radius: 10px;
   font-size: 13pt;
@@ -104,7 +104,7 @@ header {
 }
 
 #navegacao h2 a {
-  color: crimson;
+  color: rgb(220, 217, 20);
 }
 
 #inicio {
@@ -120,13 +120,13 @@ header {
   font-size: 58pt;
   font-weight: bold;
   margin-bottom: 15px;
-  color: crimson;
+  color: rgb(231, 235, 21);
 }
 
 #inicio h3 {
   font-size: 22pt;
   margin-bottom: 40px;
-  color: crimson;
+  color: rgb(228, 224, 23);
 }
 
 /* EDICA DO MAIN-------------------------------------- */
@@ -151,9 +151,9 @@ main {
   min-height: 50%;
   display: flex;
   justify-content: space-around;
-  color: #ccc;
+  color: #1b1818;
+  background-color: #e7e41b;
   background-color: #1b1818;
-  background-color: crimson;
 
 }
 
@@ -161,7 +161,7 @@ main {
   background-color: rgb(34, 33, 33);
   width: 33%;
   min-height: 100%;
-  background-color: crimson;
+  background-color: #e7e41b;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -187,10 +187,9 @@ main {
 }
 
 .box-user-caracteristica{
-  background-color: rgb(34, 33, 33);
+  background-color: #e7e41b;
   width: 33%;
   min-height: 100%;
-  background-color: crimson;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -202,7 +201,7 @@ main {
 
 .box-user-caracteristica div span{
   margin-left: 20px;
-  color: #ccc;
+  color: #1b1818;
   font-weight: bolder;
 }
 
@@ -215,7 +214,7 @@ main {
 #calculadora {
   display: flex;
   justify-content: space-evenly;
-  background-color: #1b1818;
+  background-color: #ccc;
 }
 
 .imc,
@@ -226,12 +225,12 @@ main {
 }
 
 .imc {
-  background: linear-gradient(#000, crimson);
+  background-color: #1b1818;
   margin-top: 70px;
 }
 
 .agua {
-  background: linear-gradient(crimson, #000);
+  background-color: #1b1818;
   margin-top: 70px;
 }
 
@@ -369,7 +368,7 @@ button:hover {
 
 /* Edicao do video */
 #video{
-  background-color: #ccc;
+  background-color: #1b1818;
 }
 
 #video {
@@ -399,7 +398,7 @@ button:hover {
   margin-top: 10px;
   margin-left: 10px;
   color: #1b1818;
-  background-color: crimson;
+  background-color: #e7e41b;
   border-radius: 15px;
   border: none;
   width: 150px;
@@ -408,7 +407,7 @@ button:hover {
 }
 
 #dicascorpo {
-  background-color: #1b1818;
+  background-color: #ccc;
 }
 
 .line-select {
@@ -424,7 +423,7 @@ button:hover {
 
 .line-select h1 {
   margin-right: 20px;
-  color: crimson;
+  color: #1b1818;
 }
 
 .linha {
@@ -517,7 +516,7 @@ button:hover {
 /* CSS DIV RECMENDAÇÕeS */
 
 #boxrecomendacao{
-  background-color: #1b1818;
+  background-color: #ccc;
   display: flex;
   justify-content: space-around;
 }
@@ -525,8 +524,8 @@ button:hover {
 .recomendacao{
   min-height: 100%;
   width: 33%;
-  background-color: #ccc;
-  color: #1b1818;
+  background-color: #1b1818;
+  color: #ccc;
 }
 
 .divicone{
@@ -535,6 +534,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #e7e41b;
   
 }
 
@@ -552,20 +552,20 @@ button:hover {
 }
 
 .textoacademia h1, .textodieta h1, .textcardio h1{
-  color: crimson;
+  color: #e7e41b;
   font-size: 18pt;
 }
 
 .textoacademia p, .textodieta p, .textcardio p{
   font-size: 15pt;
-  color: #1b1818;
+  color: #ccc;
   
 
 }
 
 #grafico{
   min-height: 100%;
-    background-color: #1b1818; 
+    background-color: #ccc; 
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -587,8 +587,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: crimson;
-  background-color: #ccc;
+  color: #e7e41b;;
+  background-color: #1b1818;
   padding: 60px 0px;
 }
 
@@ -599,5 +599,5 @@ footer div {
 
 footer a {
   margin: 0px 10px;
-  color: crimson;
+  color: #e7e41b;
 }

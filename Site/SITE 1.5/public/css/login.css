@@ -19,6 +19,10 @@ header {
   background-size: cover; /* faz com que a imagem cubra todo o header */
 }
 
+a {
+  text-decoration: none;
+}
+
 #navegacao {
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +58,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: crimson;
+  background-color: #e7e41b;
   color: #1b1818;
   border-radius: 10px;
   font-size: 13pt;
@@ -68,7 +72,7 @@ header {
 }
 
 #navegacao h2 a {
-  color: crimson;
+  color: #e7e41b;
 }
 
  
@@ -89,13 +93,13 @@ header {
   }
   
   .banner-login {
-    color: crimson;
+    color: #e7e41b;
   }
   
-  .banner-login .card {
+  .banner-login .cardmedio {
     background-color: #ccc;
-    height: 450px;
-    width: 600px;
+    height: 300px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-content: space-around;
@@ -122,10 +126,13 @@ header {
   
   input {
     height: 30px;
-    border: 2px solid crimson;
+    border: 2px solid #1b1818;
     border-radius: 10px;
-    margin-bottom: 10px
-    ;
+    margin-top: 40px;
+  }
+
+  span{
+    color: #1b1818;
   }
   
   .btn {
@@ -134,12 +141,10 @@ header {
     border-radius: 5px;
     font-weight: 600;
     font-size: 18px;
-    padding: 10px 15px;
     color: #1b1818;
-    background-color: crimson;
+    background-color: #e7e41b;
     width: 120px;
-    align-self: center;
-    margin-left: 80px;
+    height: 40px;
   }
   
   form {
@@ -158,13 +163,32 @@ header {
     width: 50px;
   }
 
+  .formulario{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+    flex-direction: column;
+  } 
+
+  .btnlogin{
+    width:100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+  }
   /* CSS Footer */
 
   footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: crimson;
+    color: #e7e41b;
     background-color: #1b1818;
     padding: 60px 0px;
   }
@@ -176,7 +200,7 @@ header {
   
   footer a {
     margin: 0px 10px;
-    color: crimson;
+    color: #e7e41b;
   }
   
  

@@ -34,7 +34,7 @@ header {
   height: 50%;
   display: flex;
   color: #fff;
-  background: rgba(0, 0, 0, 0.75) url("/img/cadmia.jpg"); /*edita a imagem de fundo*/
+  background: rgba(0, 0, 0, 0.75) url("/public/img"); /*edita a imagem de fundo*/
   background-image: url("/img/cadmia.jpg");
   background-blend-mode: darken; /* edita a coloração da imaegm */
   background-attachment: fixed;

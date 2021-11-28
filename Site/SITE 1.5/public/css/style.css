@@ -83,7 +83,7 @@ header{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: crimson;
+    background-color: #e7e41b;
     color: #1b1818;
     border-radius: 10px;
     font-size: 13pt;
@@ -99,7 +99,7 @@ header{
 }
 
 #navegacao h2 a{
-    color: crimson;
+    color: #e7e41b;
 }
 
 #inicio{
@@ -115,19 +115,19 @@ header{
     font-size: 58pt;
     font-weight: bold;
     margin-bottom: 15px;
-    color: crimson;
+    color: #e7e41b;
 }
 
 #inicio h3{
     font-size: 22pt;
     margin-bottom: 40px;
-    color: crimson;
+    color: #e7e41b;
 }
 
 /* Sobre */
 #sobre{
     background-color: #1b1818;
-    color: crimson;
+    color: #e7e41b;
     
 }
 
@@ -142,7 +142,7 @@ header{
 .conteudo-sobre{
     height: 80%;
     display: flex;
-    color: crimson;
+    color: #e7e41b;
 }
 
 .img-sobre{
@@ -202,7 +202,7 @@ header{
 .divmim p{
     height: 60%;
     width: 100%;
-    color: crimson;
+    color: #1b1818;
     font-size: 20pt;
     margin-bottom: 30px;
 }
@@ -210,7 +210,7 @@ header{
 #video{
   background-color: #1b1818;
   min-height: 100%;
-  color: crimson;
+  color: #e7e41b;
 }
 
 #video {
@@ -240,7 +240,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: crimson;
+    color: #e7e41b;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 60px 0px;
 }
@@ -252,7 +252,7 @@ footer div{
 
 footer a{
     margin: 0px 10px;
-    color: crimson;
+    color: #e7e41b;
     transition: 0.5s;
 }
 

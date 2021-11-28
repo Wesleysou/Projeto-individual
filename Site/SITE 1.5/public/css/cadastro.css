@@ -33,6 +33,10 @@ header {
 #navegacao h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-bottom: none;
+  text-decoration: none;
+}
+#navegacao h2 a{
+  text-decoration: none;
 }
 
 #navegacao nav {
@@ -45,16 +49,19 @@ header {
 #navegacao h2 a {
   margin: 0px 15px;
   color: #fff;
+ 
 }
 
 #navegacao nav a {
   border: 1px solid black;
   width: 100px;
   height: 30px;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: crimson;
+  text-decoration: none;
+  background-color: #e7e41b;
   color: #1b1818;
   border-radius: 10px;
   font-size: 13pt;
@@ -68,7 +75,7 @@ header {
 }
 
 #navegacao h2 a {
-  color: crimson;
+  color: #e7e41b;
 }
 
  
@@ -89,14 +96,13 @@ header {
   }
   
   .banner-login {
-    color: crimson;
+    color: #1b1818;
   }
   
-  .banner-login .card {
+  .banner-login .cardmedio {
     background-color: #ccc;
     height: 450px;
-    width: 800px;
-    display: flex;
+    width: 500px;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
@@ -120,29 +126,26 @@ header {
   
   input {
     height: 30px;
-    border: 2px solid crimson;
+    border: 2px solid #1b1818;
     border-radius: 10px;
-    margin-bottom: 10px
-    ;
   }
   
   .btn {
     font-family: "Exo 2", sans-serif;
     border: 0;
     border-radius: 5px;
-    font-weight: 600;
     font-size: 18px;
-    padding: 10px 15px;
     color: #1b1818;
-    background-color: crimson;
+    background-color: #e7e41b;
     width: 120px;
-    align-self: center;
-    margin-left: 80px;
+    height: 50px;
+    
   }
   
   .formulario {
     display: flex;
     justify-content: space-around;
+    height: 80%;
   }
   
   .loading-div {
@@ -155,6 +158,40 @@ header {
     height: 50px;
     width: 50px;
   }
+  #cor_input, #genero_input, #biotipo_input{
+    background-color: #1b1818;
+    color: #e7e41b;
+    border-radius: 10px;
+    width: 110px;
+    height: 30px;
+    font-size: 10pt;
+
+
+  }
+
+  #form2{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    margin-left: 10px;
+
+  }
+
+  #form_cadastro{
+    height: 100%;
+
+  }
+
+  .btcadastrar{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+
 
   /* CSS Footer */
 
@@ -162,7 +199,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: crimson;
+    color: #e7e41b;
     background-color: #1b1818;
     padding: 60px 0px;
   }
@@ -174,7 +211,7 @@ header {
   
   footer a {
     margin: 0px 10px;
-    color: crimson;
+    color: #e7e41b;
   }
   
  

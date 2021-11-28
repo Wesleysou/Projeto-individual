@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
     <title>AcademiaSlow | Cadastro</title>
 
@@ -30,9 +31,9 @@
         <section id="navegacao">
             <h2><a href="./index.html">AcademiaSlow</a></h2>
             <nav>
-                <a href="#">Home</a>
-                <a href="./cadastro.html">Cadastro</a>
-                <a href="#">Login</a>
+                <a href="./index.html">Home</a>
+                <a href="#">Cadastro</a>
+                <a href="./login.html">Login</a>
             </nav>
 
         </section>
@@ -45,7 +46,7 @@
 
     <div class="banner-login ">
         <div class="container ">
-            <div class="card medio">
+            <div class="cardmedio">
                 <div class="formulario">
                     <div id="form_cadastro">
                         Nome:
@@ -76,15 +77,12 @@
                             <option value="Ectomorfo">Ectomorfo</option>
                         </select>
                         <!-- <input id="biotipo_input" type="text" placeholder="EX:Mesomorfo"> -->
-                        <br>
-                        <br>
-                        <button class="btn" onclick="cadastrar()">Cadastrar</button>
                     </div>
 
                     <div id="form2">
                         Altura:
                         <br>
-                        <input id="altura_input" type="text" placeholder="EX:Mesomorfo">
+                        <input id="altura_input" type="text" placeholder="EX: 1.70">
                         <br>
                         Idade:
                         <br>
@@ -92,18 +90,38 @@
                         <br>
                         Cor:
                         <br>
-                        <input id="cor_input" type="text" placeholder="EX:Mesomorfo">
+                        <select name="" id="cor_input">
+                            <option selected disabled value=" ">---Selecione---</option>
+                            <option value="Preto">Preto</option>
+                            <option value="Branco">Branco</option>
+                            <option value="Pardo">Pardo</option>
+                        </select>
                         <br>
                         Genero:
                         <br>
-                        <input id="genero_input" type="text" placeholder="EX:Mesomorfo">
+                            <select name="" id="genero_input">
+                            <option selected disabled value=" ">---Selecione---</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="--------">Outro</option>
+                        </select>
                         <br>
                         Data:
                         <br>
-                        <input id="data_input" type="text" placeholder="EX:Mesomorfo">
+                        <input id="data_input" type="date">
                         <br>
+                       
                     </div>
+                     
+ 
                 </div>
+
+                <div class="btcadastrar">
+
+                    <button class="btn" onclick="cadastrar()" onclick="cadastrarcara()">Cadastrar</button>
+
+                </div>
+
                 <div id="div_aguardar" class="loading-div">
                     <img src="./assets/circle-loading.gif" id="loading-gif">
                 </div>
@@ -111,6 +129,9 @@
                 <div id="div_erros_login">
 
                 </div>
+
+                
+
             </div>
         </div>
     </div>
@@ -144,11 +165,6 @@
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
         var bioVar = biotipo_input.value;
-        var altVar = altura_input.value;
-        var idadeVar = idade_input.value;
-        var corVar = cor_input.value;
-        var generoVar = genero_input.value;
-        var dataVar = data_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
 
@@ -164,6 +180,9 @@
             }
             if (confirmacaoSenhaVar == "") {
                 console.log('confirmacaoSenha está em branco')
+            }
+            if(bioVar == "") {
+                console.log('Biotipo está em branco')
             }
             finalizarAguardar();
             return false;
@@ -191,6 +210,74 @@
                 emailServer: emailVar,
                 senhaServer: senhaVar,
                 bioServer: bioVar,
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    //---------------------------
+    function cadastrarcara() {
+        aguardar();
+
+        var altVar = altura_input.value;
+        var idadeVar = idade_input.value;
+        var corVar = cor_input.value;
+        var generoVar = genero_input.value;
+        var dataVar = data_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+
+            window.alert("Preencha todos os campos para prosseguir!");
+            if (altVar == "") {
+                console.log('nome está em branco')
+            }
+            if (idadeVar == "") {
+                console.log('email está em branco')
+            }
+            if (corVar == "") {
+                console.log('senha está em branco')
+            }
+            if (generoVar == "") {
+                console.log('confirmacaoSenha está em branco')
+            }
+            finalizarAguardar();
+            return false;
+        }
+
+        if (altVar.indexOf(".") == -1) {
+            window.alert("Ultilize ponto no lugar da virgula");
+            finalizarAguardar();
+            return false;
+        }
+        if (idadeVar.Max ) {
+            window.alert("Ultilize ponto no lugar da virgula");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/cadastrarcara", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
                 altServer: altVar,
                 idadeServer: idadeVar,
                 corServer: corVar,
