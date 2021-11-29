@@ -11,9 +11,34 @@
     <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
 
     <title>AcademiaSlow | </title>
+
+    <script>
+                function funcmesomorfo() {
+            fetch("/usuarios/funcmesomorfo").then(function (resposta) {
+                console.log("ESTOU NO THEN DO funcmesomorfo()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        mesomorfo = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(mesomorfo.Mesomorfobd);
+                        sessionStorage.MESOMORFO = mesomorfo.Mesomorfobd;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
+
+    </script>
 </head>
 
-<body onload="validarSessao(), atualizacaoPeriodica()">
+<body onload="funcmesomorfo()">
     <header>
 
         <section id="navegacao">
@@ -714,6 +739,12 @@
 
 <script>
 
+
+
+
+
+//  ----------------------------------------------------------------//
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     biotipo_user.innerHTML = sessionStorage.BIOTIPO_USUARIO;
     b_altura.innerHTML = sessionStorage.ALTURA_USUARIO;
@@ -821,7 +852,7 @@
     // gráfico de Barras
     var ctxBar = document.getElementById("chartBar").getContext("2d");
     var rotulosBar = ["Ectomorfo", "Mesomorfo", "Endomorfo"];
-    var dataBar = [4, 10, 8];
+    var dataBar = [3, Number(sessionStorage.MESOMORFO), 8];
     var configBar = {
         type: 'bar',
         data: {
