@@ -19,9 +19,9 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
-router.post("/cadastrarcara", function (req, res) {
-    usuarioController.cadastrarcara(req, res);
-});
+// router.post("/cadastrarcara", function (req, res) {
+//     usuarioController.cadastrarcara(req, res);
+// });
 
 router.get("/funcmesomorfo", function (req, res) {
     usuarioController.funcmesomorfo(req, res);

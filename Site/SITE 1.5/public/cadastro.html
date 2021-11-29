@@ -118,7 +118,7 @@
 
                 <div class="btcadastrar">
 
-                    <button class="btn" onclick="cadastrar()" onclick="cadastrarcara()">Cadastrar</button>
+                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
                 </div>
 
@@ -165,6 +165,11 @@
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
         var bioVar = biotipo_input.value;
+        var altVar = altura_input.value;
+        var idadeVar = idade_input.value;
+        var corVar = cor_input.value;
+        var generoVar = genero_input.value;
+        var dataVar = data_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
 
@@ -210,6 +215,11 @@
                 emailServer: emailVar,
                 senhaServer: senhaVar,
                 bioServer: bioVar,
+                altServer: altVar,
+                idadeServer: idadeVar,
+                corServer: corVar,
+                generoServer: generoVar,
+                dataServer: dataVar
 
             })
         }).then(function (resposta) {
@@ -233,75 +243,57 @@
     }
 
     //---------------------------
-    function cadastrarcara() {
-        aguardar();
+    // function cadastrarcara() {
+    //     aguardar();
 
-        var altVar = altura_input.value;
-        var idadeVar = idade_input.value;
-        var corVar = cor_input.value;
-        var generoVar = genero_input.value;
-        var dataVar = data_input.value;
+    //     var altVar = altura_input.value;
+    //     var idadeVar = idade_input.value;
+    //     var corVar = cor_input.value;
+    //     var generoVar = genero_input.value;
+    //     var dataVar = data_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
 
-            window.alert("Preencha todos os campos para prosseguir!");
-            if (altVar == "") {
-                console.log('nome está em branco')
-            }
-            if (idadeVar == "") {
-                console.log('email está em branco')
-            }
-            if (corVar == "") {
-                console.log('senha está em branco')
-            }
-            if (generoVar == "") {
-                console.log('confirmacaoSenha está em branco')
-            }
-            finalizarAguardar();
-            return false;
-        }
+    //     if (altVar.indexOf(".") == -1) {
+    //         window.alert("Ultilize ponto no lugar da virgula");
+    //         finalizarAguardar();
+    //         return false;
+    //     }
+    //     if (idadeVar.Max ) {
+    //         window.alert("Ultilize ponto no lugar da virgula");
+    //         finalizarAguardar();
+    //         return false;
+    //     }
 
-        if (altVar.indexOf(".") == -1) {
-            window.alert("Ultilize ponto no lugar da virgula");
-            finalizarAguardar();
-            return false;
-        }
-        if (idadeVar.Max ) {
-            window.alert("Ultilize ponto no lugar da virgula");
-            finalizarAguardar();
-            return false;
-        }
+    //     fetch("/usuarios/cadastrarcara", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             altServer: altVar,
+    //             idadeServer: idadeVar,
+    //             corServer: corVar,
+    //             generoServer: generoVar,
+    //             dataServer: dataVar
+    //         })
+    //     }).then(function (resposta) {
 
-        fetch("/usuarios/cadastrarcara", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                altServer: altVar,
-                idadeServer: idadeVar,
-                corServer: corVar,
-                generoServer: generoVar,
-                dataServer: dataVar
-            })
-        }).then(function (resposta) {
+    //         console.log("resposta: ", resposta);
 
-            console.log("resposta: ", resposta);
+    //         if (resposta.ok) {
+    //             window.alert("Cadastro realizado com sucesso!");
+    //             window.location = "login.html";
+    //             limparFormulario();
+    //             finalizarAguardar();
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar o cadastro!");
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //         finalizarAguardar();
+    //     });
 
-            if (resposta.ok) {
-                window.alert("Cadastro realizado com sucesso!");
-                window.location = "login.html";
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
-
-        return false;
-    }
+    //     return false;
+    // }
 
 </script>

@@ -118,6 +118,11 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
     var biotipo = req.body.bioServer;
+    var altura = req.body.altServer;
+    var idade = req.body.idadeServer;
+    var cor = req.body.corServer;
+    var genero = req.body.generoServer;
+    var data = req.body.dataServer;
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
@@ -125,42 +130,15 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else {
-        
-        usuarioModel.cadastrar(nome, email, senha, biotipo)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    }
-}
-
-function cadastrarcara(req, res) {
-    var altura = req.body.altServer;
-    var idade = req.body.idadeServer;
-    var cor = req.body.corServer;
-    var genero = req.body.generoServer;
-    var data = req.body.dataServer;
-
-    if (altura == undefined) {
-        res.status(400).send("Seu nome está undefined!");
+    } else if (altura == undefined) {
+        res.status(400).send("Seu altura está undefined!");
     } else if (idade == undefined) {
-        res.status(400).send("Seu email está undefined!");
+        res.status(400).send("Seu idade está undefined!");
     } else if (cor == undefined) {
-        res.status(400).send("Sua senha está undefined!");
-    } else {
+        res.status(400).send("Sua cor está undefined!");
+    }else{
         
-        usuarioModel.cadastrarcara(altura, idade, cor, genero, data)
+        usuarioModel.cadastrar(nome, email, senha, biotipo, altura, idade, cor, genero, data)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -177,13 +155,43 @@ function cadastrarcara(req, res) {
             );
     }
 }
+
+// function cadastrarcara(req, res) {
+
+    
+
+//     if (altura == undefined) {
+//         res.status(400).send("Seu nome está undefined!");
+//     } else if (idade == undefined) {
+//         res.status(400).send("Seu email está undefined!");
+//     } else if (cor == undefined) {
+//         res.status(400).send("Sua senha está undefined!");
+//     } else {
+        
+//         usuarioModel.cadastrarcara(altura, idade, cor, genero, data)
+//             .then(
+//                 function (resultado) {
+//                     res.json(resultado);
+//                 }
+//             ).catch(
+//                 function (erro) {
+//                     console.log(erro);
+//                     console.log(
+//                         "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                         erro.sqlMessage
+//                     );
+//                     res.status(500).json(erro.sqlMessage);
+//                 }
+//             );
+//     }
+// }
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
     testar,
-    cadastrarcara,
+    // cadastrarcara,
     funcmesomorfo,
     funcectomorfo,
     funcendomorfo,
