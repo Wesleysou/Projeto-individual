@@ -27,4 +27,12 @@ router.get("/funcmesomorfo", function (req, res) {
     usuarioController.funcmesomorfo(req, res);
 });
 
+router.get("/funcectomorfo", function (req, res) {
+    usuarioController.funcectomorfo(req, res);
+});
+
+router.get("/funcendomorfo", function (req, res) {
+    usuarioController.funcendomorfo(req, res);
+});
+
 module.exports = router;

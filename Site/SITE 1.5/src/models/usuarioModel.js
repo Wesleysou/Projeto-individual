@@ -48,10 +48,30 @@ function funcmesomorfo() {
     return database.executar(instrucao);
 }
 
+function funcectomorfo() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function funcectomorfo()");
+    var instrucao = `
+       SELECT COUNT(BiotipoUser) as Ectomorfobd FROM usuario WHERE BiotipoUser = 'Ectomorfo'; `
+    ;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function funcendomorfo() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function funcendomorfo()");
+    var instrucao = `
+       SELECT COUNT(BiotipoUser) as Endomorfobd FROM usuario WHERE BiotipoUser = 'Endomorfo'; `
+    ;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
     cadastrarcara,
     funcmesomorfo,
+    funcectomorfo,
+    funcendomorfo,
 };

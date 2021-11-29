@@ -13,7 +13,7 @@
     <title>AcademiaSlow | </title>
 
     <script>
-                function funcmesomorfo() {
+        function funcmesomorfo() {
             fetch("/usuarios/funcmesomorfo").then(function (resposta) {
                 console.log("ESTOU NO THEN DO funcmesomorfo()!")
                 if (resposta.ok) {
@@ -34,15 +34,57 @@
             return false;
         }
 
+        function funcectomorfo() {
+            fetch("/usuarios/funcectomorfo").then(function (resposta) {
+                console.log("ESTOU NO THEN DO funcectomorfo()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        ectomorfo = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(ectomorfo.Ectomorfobd);
+                        sessionStorage.ECTOMORFO = ectomorfo.Ectomorfobd;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+        
+        function funcendomorfo() {
+            fetch("/usuarios/funcendomorfo").then(function (resposta) {
+                console.log("ESTOU NO THEN DO funcendomorfo()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        endomorfo = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(endomorfo.Endomorfobd);
+                        sessionStorage.ENDOMORFO = endomorfo.Endomorfobd;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
 
     </script>
 </head>
 
-<body onload="funcmesomorfo()">
+<body onload="funcmesomorfo(), funcectomorfo(), funcendomorfo()">
     <header>
 
         <section id="navegacao">
-            <h2><a href="/api-site/public/Indexslow.html">AcademiaSlow</a></h2>
+            <h2><a href="/public/index.html">AcademiaSlow</a></h2>
             <nav>
                 <a href="#calculadora">Calculadora</a>
                 <a href="#video">Video</a>
@@ -613,7 +655,7 @@
                     </div>
 
                     <div class="conteudodica">
-                        
+
                     </div>
 
                 </div>
@@ -743,7 +785,7 @@
 
 
 
-//  ----------------------------------------------------------------//
+    //  ----------------------------------------------------------------//
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     biotipo_user.innerHTML = sessionStorage.BIOTIPO_USUARIO;
@@ -852,7 +894,7 @@
     // gráfico de Barras
     var ctxBar = document.getElementById("chartBar").getContext("2d");
     var rotulosBar = ["Ectomorfo", "Mesomorfo", "Endomorfo"];
-    var dataBar = [3, Number(sessionStorage.MESOMORFO), 8];
+    var dataBar = [Number(sessionStorage.ECTOMORFO), Number(sessionStorage.MESOMORFO), Number(sessionStorage.ENDOMORFO)];
     var configBar = {
         type: 'bar',
         data: {
