@@ -47,11 +47,10 @@ header {
   height: 50%;
   display: flex;
   color: #fff;
-  background: rgba(0, 0, 0, 0.75) url("/api-site/public/assets/cadmia.jpg"); /*edita a imagem de fundo*/
-  background-image: url("/api-site/public/assets/cadmia.jpg");
+  background: rgba(0, 0, 0, 0.75) url("/public/img/Imgfundo.jpg"); /*edita a imagem de fundo*/
+  background-image: url("/public/img/Imgfundo.jpg");
   background-blend-mode: darken; /* edita a coloração da imaegm */
-  background-attachment: fixed;
-  background-size: cover; /* faz com que a imagem cubra todo o header */
+  background-repeat: no-repeat;
 }
 
 
@@ -165,6 +164,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 10px;
 
 }
 

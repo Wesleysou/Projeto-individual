@@ -129,7 +129,7 @@
 
         </div>
 
-        <div class="box-user-caracteristica">
+        <!-- <div class="box-user-caracteristica">
             <div>
 
                 <h2>Altura:</h2> <span id="b_altura"></span>
@@ -160,7 +160,7 @@
 
             </div>
 
-        </div>
+        </div> -->
 
     </section>
 
@@ -789,11 +789,11 @@
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     biotipo_user.innerHTML = sessionStorage.BIOTIPO_USUARIO;
-    b_altura.innerHTML = sessionStorage.ALTURA_USUARIO;
-    b_idade.innerHTML = sessionStorage.IDADE_USUARIO;
-    b_cor.innerHTML = sessionStorage.COR_USUARIO;
-    b_genero.innerHTML = sessionStorage.GENERO_USUARIO;
-    b_data.innerHTML = sessionStorage.DATA_USUARIO;
+    // b_altura.innerHTML = sessionStorage.ALTURA_USUARIO;
+    // b_idade.innerHTML = sessionStorage.IDADE_USUARIO;
+    // b_cor.innerHTML = sessionStorage.COR_USUARIO;
+    // b_genero.innerHTML = sessionStorage.GENERO_USUARIO;
+    // b_data.innerHTML = sessionStorage.DATA_USUARIO;
 
     var vt_imc = [];
 
@@ -874,11 +874,11 @@
 
     function funcmelhoras() {
         alert(`O seu Primeiro IMC foi ${vt_imc[0]} o seu ultimo foi ${vt_imc[vt_imc.length - 1]}`)
-        if (vt_imc[0] >= vt_imc[vt_imc.length - 1]) {
-            alert('Parabêns você teve uma melhora de ')
-        } else {
-            alert("Treine mais e siga as dicas do site")
-        }
+        // if (vt_imc[0] >= vt_imc[vt_imc.length - 1]) {
+        //     alert('Parabêns você teve uma melhora de ')
+        // } else {
+        //     alert("Treine mais e siga as dicas do site")
+        // }
     }
 
     function funchistorico() {
