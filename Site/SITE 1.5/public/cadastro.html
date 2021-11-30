@@ -86,7 +86,7 @@
                         <br>
                         Idade:
                         <br>
-                        <input id="idade_input" type="text" placeholder="EX:Mesomorfo">
+                        <input id="idade_input" maxlength="2" type="text" placeholder="EX:18">
                         <br>
                         Cor:
                         <br>
@@ -171,7 +171,7 @@
         var generoVar = genero_input.value;
         var dataVar = data_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || altVar == "" || idadeVar == "" || corVar == "" || generoVar == "" || dataVar == "") {
 
             window.alert("Preencha todos os campos para prosseguir!");
             if (nomeVar == "") {
@@ -189,6 +189,21 @@
             if(bioVar == "") {
                 console.log('Biotipo está em branco')
             }
+            if(altVar == "") {
+                console.log('Biotipo está em branco')
+            }
+            if(idadeVar == "") {
+                console.log('Biotipo está em branco')
+            }
+            if(corVar == "") {
+                console.log('Biotipo está em branco')
+            }
+            if(generoVar == "") {
+                console.log('Biotipo está em branco')
+            }
+            if(dataVar == "") {
+                console.log('Biotipo está em branco')
+            }
             finalizarAguardar();
             return false;
         }
@@ -198,7 +213,11 @@
             finalizarAguardar();
             return false;
         }
-
+        // if (idadeVar.indexOf(".") == -1) {
+        //     window.alert("Ultilize ponto no lugar da virgula no campo 'idade' ");
+        //     finalizarAguardar();
+        //     return false;
+        // }
         if (senhaVar != confirmacaoSenhaVar) {
             window.alert("As senhas inseridas devem ser iguais para prosseguir!");
             finalizarAguardar();
