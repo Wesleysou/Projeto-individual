@@ -28,7 +28,8 @@ hr{
 
 .confirm{
     min-height: 100%;  
-    background-image: url("/public/img/Imgfundo.jpg");
+    background: rgba(0, 0, 0, 0.75) url("/img/cadmia.jpg");
+    background-image: url("/img/cadmia.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
